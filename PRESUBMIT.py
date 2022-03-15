@@ -3,6 +3,8 @@
 # found in the LICENSE file.
 
 
+USE_PYTHON3 = True
+
 LUCICFG_ENTRY_SCRIPTS = ['main.star']
 
 
