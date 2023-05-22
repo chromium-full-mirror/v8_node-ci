@@ -1,4 +1,7 @@
-#!/usr/bin/env lucicfg
+#!/usr/bin/env -S bash -xc 'lucicfg format && lucicfg "$0"'
+# Copyright 2020 the V8 project authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
 
 lucicfg.check_version("1.30.9", "Please update depot_tools")
 
@@ -236,20 +239,19 @@ def recipe(name):
         use_bbagent = True,
     )
 
-def goma_args(*, enable_ats = False):
-    args = {
-        "$build/goma": {
-            "server_host": "goma.chromium.org",
-            "rpc_extra_params": "?prod",
-            "use_luci_auth": True,
+def reclient_properties(instance):
+    return {
+        "$build/reclient": {
+            "instance": instance,
+            "metrics_project": "chromium-reclient-metrics",
+        },
+        "$build/v8": {
+            "use_remoteexec": True,
         },
     }
-    if enable_ats:
-        args["$build/goma"]["enable_ats"] = True
-    return args
 
-GOMA_DEFAULT = goma_args()
-GOMA_ATS = goma_args(enable_ats = True)
+RECLIENT_CI = reclient_properties("rbe-chromium-trusted")
+RECLIENT_TRY = reclient_properties("rbe-chromium-untrusted")
 
 DEFAULT_ARGS = {
     "executable": recipe("v8/node_integration_ng"),
@@ -277,12 +279,12 @@ def try_builder(*, name, os, properties, **kwargs):
         **dict(DEFAULT_ARGS, **kwargs)
     )
 
-def builder_pair(*, ci_name, try_name, os, goma = None, cq = False, is_debug = False):
+def builder_pair(*, ci_name, try_name, os, cq = False, is_debug = False):
     """Add a CI/trybot pair for a given OS."""
     ci_builder(
         name = ci_name,
         os = os,
-        properties = dict(goma or {}, is_debug = is_debug),
+        properties = dict(RECLIENT_CI, is_debug = is_debug),
         execution_timeout = time.hour,
     )
     luci.console_view_entry(builder = ci_name, console_view = "main")
@@ -290,7 +292,7 @@ def builder_pair(*, ci_name, try_name, os, goma = None, cq = False, is_debug = F
     try_builder(
         name = try_name,
         os = os,
-        properties = dict(goma or {}, is_debug = is_debug),
+        properties = dict(RECLIENT_TRY, is_debug = is_debug),
         execution_timeout = time.hour // 2,
     )
     luci.list_view_entry(builder = try_name, list_view = "tryserver")
@@ -305,7 +307,6 @@ builder_pair(
     ci_name = "Node-CI Linux64",
     try_name = "node_ci_linux64_rel",
     os = "Ubuntu",
-    goma = GOMA_DEFAULT,
     cq = True,
 )
 
@@ -313,7 +314,6 @@ builder_pair(
     ci_name = "Node-CI Linux64 - debug",
     try_name = "node_ci_linux64_dbg",
     os = "Ubuntu",
-    goma = GOMA_DEFAULT,
     is_debug = True,
 )
 
@@ -327,7 +327,6 @@ builder_pair(
     ci_name = "Node-CI Win64",
     try_name = "node_ci_win64_rel",
     os = "Windows-10",
-    goma = GOMA_ATS,
 )
 
 ###############################################################################
