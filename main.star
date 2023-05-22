@@ -293,7 +293,7 @@ def builder_pair(*, ci_name, try_name, os, cq = False, is_debug = False):
         name = try_name,
         os = os,
         properties = dict(RECLIENT_TRY, is_debug = is_debug),
-        execution_timeout = time.hour // 2,
+        execution_timeout = time.hour,
     )
     luci.list_view_entry(builder = try_name, list_view = "tryserver")
 
