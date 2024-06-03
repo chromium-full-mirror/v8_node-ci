@@ -125,6 +125,17 @@ READER_ACL = acl.entry(
     groups = "all",
 )
 
+LED_BINDINGS = luci.binding(
+    roles = "role/buildbucket.creator",
+    groups = ["project-v8-led-users"],
+)
+
+def shadow_constraints(name, service_accounts):
+    return luci.bucket_constraints(
+        service_accounts = service_accounts,
+        pools = ["pool/%s" % name],
+    )
+
 luci.bucket(
     name = "ci",
     acls = [
@@ -137,7 +148,16 @@ luci.bucket(
 )
 
 luci.bucket(
+    name = "ci.shadow",
+    shadows = "ci",
+    bindings = [LED_BINDINGS],
+    constraints = shadow_constraints("ci", [CI_ACCOUNT]),
+    dynamic = True,
+)
+
+luci.bucket(
     name = "try",
+    shadows = "try",
     acls = [
         READER_ACL,
         acl.entry(
@@ -146,6 +166,8 @@ luci.bucket(
             projects = ["v8"],
         ),
     ],
+    bindings = [LED_BINDINGS],
+    constraints = shadow_constraints("try", [TRY_ACCOUNT]),
 )
 
 luci.binding(
