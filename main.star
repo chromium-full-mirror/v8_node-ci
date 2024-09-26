@@ -339,18 +339,6 @@ builder_pair(
     is_debug = True,
 )
 
-builder_pair(
-    ci_name = "Node-CI Mac64",
-    try_name = "node_ci_mac64_rel",
-    os = "Mac",
-)
-
-builder_pair(
-    ci_name = "Node-CI Win64",
-    try_name = "node_ci_win64_rel",
-    os = "Windows-10",
-)
-
 ###############################################################################
 # Non-standard builders
 
