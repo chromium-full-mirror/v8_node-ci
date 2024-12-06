@@ -13,31 +13,34 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '16df85f9a7ced865a722e21787a0d96440edc0ab',
+  'abseil_revision': '0b76dfe4fffd3f49efacde5f3268b02f9c060ef0',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
-  'build_revision': '636ceb6dea83e899eb5d168a32c293bf85c3bb5c',
+  'build_revision': 'dc8b2298602e358156f40e1c5531c7c8c3d27c93',
   'build_url': 'https://chromium.googlesource.com/chromium/src/build.git',
 
-  'buildtools_revision': 'd62e23e82180d514dbf1d5d7caffd7dcbc3294c1',
+  'buildtools_revision': 'f312f0fbb3030c07a57524691e03aa1cd14f3d02',
   'buildtools_url': 'https://chromium.googlesource.com/chromium/src/buildtools.git',
 
-  'buildtools_clang_format_revision': '2221d56f57b4346042368e520140e5894d319f94',
+  'buildtools_clang_format_revision': '1549a8dba21b6c022c6f5ccee4edf18e5ceb2109',
   'buildtools_clang_format_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/clang/tools/clang-format.git',
 
-  'buildtools_libcxx_revision': '2a2315e69ab61cb488c18fbbb1cd502be049c122',
+  'buildtools_libcxx_revision': '9c12a0833f9b62a1aafeb612479653c498845a92',
   'buildtools_libcxx_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxx.git',
 
-  'buildtools_libcxxabi_revision': '0226cb1cdfe740b173394e1cebbd0dcf293e38ad',
+  'buildtools_libcxxabi_revision': '6c4fa00e4becc30085cbc8b44c2764ef307daae2',
   'buildtools_libcxxabi_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxxabi.git',
 
-  'buildtools_libunwind_revision': '69b8c646978a1650f10ee7c355b85018a3e23909',
+  'buildtools_llvm_libc_revision': 'd8809b0a2e6edd91a9467892ec29315616784973',
+  'buildtools_llvm_libc_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libc.git',
+
+  'buildtools_libunwind_revision': '6066b149576465160ac0d935aa644ec6d3bfb2bf',
   'buildtools_libunwind_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libunwind.git',
 
-  'clang_revision': '37d1894d5350b2cdfde3b4a81858c8d14c7c5eb8',
+  'clang_revision': 'ec29fe1f187bfc6e995a7a602f77d31226817d17',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': 'b5eb54d5c1aeae79c8b07a516bdf3e380ad0bba7',
+  'depot_tools_revision': 'ba733f35cde8ae85e7ca85956cdc63b297dc9425',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -56,10 +59,10 @@ vars = {
   'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'd144031940543e15423a25ae5a8a74141044862f',
+  'googletest_revision': '35d0c365609296fa4730d62057c487e3cfa030ff',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
-  'icu_revision': 'c12357a8ce1de15f219db37179b3c72af001610c',
+  'icu_revision': 'ba7ed88cc5ffa428a82a0f787dd61031aa5ef4ca',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': '5e1ee241ab04b38889f8d517f2da8b3df7cfbd9a',
@@ -74,7 +77,7 @@ vars = {
   'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': 'd73248d197913cbb0faa51f52226824a076731de',
+  'v8_revision': 'd7d1b12a6e2f83038c18914084cff426f1969839',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
   'zlib_revision': '82a5fecf8aae8f288267cfdb2d29c9ebf7b37e59',
@@ -97,9 +100,10 @@ deps = {
   },
   'build': Var('build_url') + '@' + Var('build_revision'),
   'buildtools': Var('buildtools_url') + '@' + Var('buildtools_revision'),
-  'buildtools/clang_format/script': Var('buildtools_clang_format_url') + '@' + Var('buildtools_clang_format_revision'),
+  'third_party/clang-format/script': Var('buildtools_clang_format_url') + '@' + Var('buildtools_clang_format_revision'),
   'third_party/libc++/src': Var('buildtools_libcxx_url') + '@' + Var('buildtools_libcxx_revision'),
   'third_party/libc++abi/src': Var('buildtools_libcxxabi_url') + '@' + Var('buildtools_libcxxabi_revision'),
+  'third_party/llvm-libc/src': Var('buildtools_llvm_libc_url') + '@' + Var('buildtools_llvm_libc_revision'),
   'third_party/libunwind/src': Var('buildtools_libunwind_url') + '@' + Var('buildtools_libunwind_revision'),
   'node': Var('node_url') + '@' + Var('node_revision'),
   'third_party/abseil-cpp': Var('abseil_url') + '@' + Var('abseil_revision'),
@@ -244,58 +248,6 @@ hooks = [
     'action': ['python3',
                'build/linux/sysroot_scripts/install-sysroot.py',
                '--arch=x64'],
-  },
-
-  # Pull clang-format binaries using checked-in hashes.
-  {
-    'name': 'clang_format_win',
-    'pattern': '.',
-    'condition': 'host_os == "win"',
-    'action': [ 'python3',
-                'third_party/depot_tools/download_from_google_storage.py',
-                '--no_resume',
-                '--no_auth',
-                '--bucket', 'chromium-clang-format',
-                '-s', 'buildtools/win/clang-format.exe.sha1',
-    ],
-  },
-  {
-    'name': 'clang_format_mac_x64',
-    'pattern': '.',
-    'condition': 'host_os == "mac" and host_cpu == "x64"',
-    'action': [ 'python3',
-                'third_party/depot_tools/download_from_google_storage.py',
-                '--no_resume',
-                '--no_auth',
-                '--bucket', 'chromium-clang-format',
-                '-s', 'buildtools/mac/clang-format.x64.sha1',
-                '-o', 'buildtools/mac/clang-format',
-    ],
-  },
-  {
-    'name': 'clang_format_mac_arm64',
-    'pattern': '.',
-    'condition': 'host_os == "mac" and host_cpu == "arm64"',
-    'action': [ 'python3',
-                'third_party/depot_tools/download_from_google_storage.py',
-                '--no_resume',
-                '--no_auth',
-                '--bucket', 'chromium-clang-format',
-                '-s', 'buildtools/mac/clang-format.arm64.sha1',
-                '-o', 'buildtools/mac/clang-format',
-    ],
-  },
-  {
-    'name': 'clang_format_linux',
-    'pattern': '.',
-    'condition': 'host_os == "linux"',
-    'action': [ 'python3',
-                'third_party/depot_tools/download_from_google_storage.py',
-                '--no_resume',
-                '--no_auth',
-                '--bucket', 'chromium-clang-format',
-                '-s', 'buildtools/linux64/clang-format.sha1',
-    ],
   },
 
   # Configure remote exec cfg files

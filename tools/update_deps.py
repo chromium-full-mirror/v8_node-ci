@@ -22,9 +22,10 @@ DEPS = {
 BUILD_DEPS = {
   'build': 'origin/main',
   'buildtools': 'origin/main',
-  'buildtools/clang_format/script': 'origin/main',
+  'third_party/clang-format/script': 'origin/main',
   'third_party/libc++/src': 'origin/main',
   'third_party/libc++abi/src': 'origin/main',
+  'third_party/llvm-libc/src': 'origin/main',
   'third_party/libunwind/src': 'origin/main',
 }
 

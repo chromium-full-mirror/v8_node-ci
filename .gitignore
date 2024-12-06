@@ -3,7 +3,11 @@
 /build
 /buildtools/
 /node
-/third_party
+/third_party/*
+!/third_party/fast_float
+/third_party/fast_float/src
+!/third_party/llvm-libc
+/third_party/llvm-libc/src
 /tools/clang
 /v8
 
