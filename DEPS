@@ -62,6 +62,9 @@ vars = {
   'googletest_revision': '35d0c365609296fa4730d62057c487e3cfa030ff',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
+  'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
+  'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
+
   'icu_revision': 'ba7ed88cc5ffa428a82a0f787dd61031aa5ef4ca',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
@@ -117,6 +120,7 @@ deps = {
     'url': Var('googletest_url') + '@' + Var('googletest_revision'),
     'condition': 'not build_upstream_node',
   },
+  'third_party/highway/src': Var('highway_url') + '@' + Var('highway_revision'),
   'third_party/icu': Var('icu_url') + '@' + Var('icu_revision'),
   'third_party/jinja2': Var('jinja2_url') + '@' + Var('jinja2_revision'),
   'third_party/markupsafe': Var('markupsafe_url') + '@' + Var('markupsafe_revision'),
