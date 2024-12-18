@@ -27,6 +27,7 @@ def print_landmines():  # pylint: disable=invalid-name
   # dependency problems, fix the dependency problems instead of adding a
   # landmine.
   # See the Chromium version in src/build/get_landmines.py for usage examples.
+  print('Force rebuilt all addons')
   print('Switch to in-tree GN configsXX.')
   print('Build test with build_addons.py.')
   build_get_landmines.print_landmines()
