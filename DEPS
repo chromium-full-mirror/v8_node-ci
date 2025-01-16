@@ -86,6 +86,9 @@ vars = {
   'zlib_revision': '82a5fecf8aae8f288267cfdb2d29c9ebf7b37e59',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
+  'simdutf_revision': '5a9a2134b280c1b956ad68a0643797fe26dd1c94',
+  'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf',
+
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',
 
   # RBE instance to use for running remote builds
@@ -125,6 +128,7 @@ deps = {
   'third_party/jinja2': Var('jinja2_url') + '@' + Var('jinja2_revision'),
   'third_party/markupsafe': Var('markupsafe_url') + '@' + Var('markupsafe_revision'),
   'third_party/zlib': Var('zlib_url') + '@' + Var('zlib_revision'),
+  'third_party/simdutf': Var('simdutf_url') + '@' + Var('simdutf_revision'),
   'tools/clang': Var('clang_url') + '@' + Var('clang_revision'),
   'v8': {
     'url': Var('v8_url') + '@' +  Var('v8_revision'),
