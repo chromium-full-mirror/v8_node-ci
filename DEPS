@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '07cede32720da9f79bfd32c739a13a66bca78483',
+  'abseil_revision': '5cc19c9883171bbbdc28a142b1ece17c18bd09bc',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': 'dc8b2298602e358156f40e1c5531c7c8c3d27c93',
@@ -37,10 +37,10 @@ vars = {
   'buildtools_libunwind_revision': '6066b149576465160ac0d935aa644ec6d3bfb2bf',
   'buildtools_libunwind_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libunwind.git',
 
-  'clang_revision': 'dffea2e7173c215ea93875efefde9d02b6d1c07c',
+  'clang_revision': 'f3f536fa16c7c37fb78e3a8744db30b5af32cb59',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '138f15432a69ba7081c895cd109abf0175c9926b',
+  'depot_tools_revision': '80d1969422e75e8e9eecafa46074074b289e2568',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -59,7 +59,7 @@ vars = {
   'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'f3c355f9dd382bc2c323be2713e351a578b68c61',
+  'googletest_revision': '2b6b042a77446ff322cd7522ca068d9f2a21c1d1',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
@@ -74,20 +74,20 @@ vars = {
   'markupsafe_revision': '9f8efc8637f847ab1ba984212598e6fb9cf1b3d4',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'bf565576eb67c656501dd787078e478837d1112a',
+  'node_revision': '8d2665866f5550dc76f24e264d5b6afbe3eea835',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': 'c902f8b1350b4c679f629a7f0174740b95b44fd2',
+  'v8_revision': 'a173aac04922ffac652339f8020d6de80277e2f3',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '82a5fecf8aae8f288267cfdb2d29c9ebf7b37e59',
+  'zlib_revision': '5634698162b2182c350e4cb360a0f4dd7706afec',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'simdutf_revision': '5a9a2134b280c1b956ad68a0643797fe26dd1c94',
-  'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf',
+  'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf.git',
 
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',
 
