@@ -97,4 +97,11 @@ default_args = {
   v8_enable_sandbox = false
   # TODO(cbruni, v8:12302): Remove once API is migrated
   v8_scriptormodule_legacy_lifetime = true
+
+  #########################################################
+  # Perfetto options.
+  # Disable js dependencies like the closure compiler.
+  enable_js_protobuf = false
+  enable_perfetto_unittests = false
+  enable_perfetto_integration_tests = false
 }

@@ -89,6 +89,15 @@ vars = {
   'simdutf_revision': '5a9a2134b280c1b956ad68a0643797fe26dd1c94',
   'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf.git',
 
+  'perfetto_revision': 'aa4d8267bafad6782a1f2c8d979104f2aaa622a0',
+  'perfetto_url': 'https://android.googlesource.com/platform/external/perfetto.git',
+
+  'protobuf_revision': 'cd23b39adb8c3c2c1a320af29387d101ec48cfe4',
+  'protobuf_url': 'https://chromium.googlesource.com/chromium/src/third_party/protobuf.git',
+
+  'jsoncpp_revision': '42e892d96e47b1f6e29844cc705e148ec4856448',
+  'jsoncpp_url': 'https://chromium.googlesource.com/external/github.com/open-source-parsers/jsoncpp.git',
+
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',
 
   # RBE instance to use for running remote builds
@@ -129,6 +138,9 @@ deps = {
   'third_party/markupsafe': Var('markupsafe_url') + '@' + Var('markupsafe_revision'),
   'third_party/zlib': Var('zlib_url') + '@' + Var('zlib_revision'),
   'third_party/simdutf': Var('simdutf_url') + '@' + Var('simdutf_revision'),
+  'third_party/perfetto': Var('perfetto_url') + '@' + Var('perfetto_revision'),
+  'third_party/protobuf': Var('protobuf_url') + '@' + Var('protobuf_revision'),
+  'third_party/jsoncpp/source': Var('jsoncpp_url') + '@' + Var('jsoncpp_revision'),
   'tools/clang': Var('clang_url') + '@' + Var('clang_revision'),
   'v8': {
     'url': Var('v8_url') + '@' +  Var('v8_revision'),
