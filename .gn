@@ -49,6 +49,7 @@ exec_script_whitelist =
     "//node/deps/uvwasi/unofficial.gni",
     "//node/deps/uv/unofficial.gni",
     "//node/deps/v8/build_overrides/build.gni",
+    "//node/deps/zstd/unofficial.gni",
     "//node/src/inspector/unofficial.gni",
     "//node_tests/BUILD.gn",
   ]
