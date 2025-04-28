@@ -53,6 +53,9 @@ vars = {
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
   'ninja_version': 'version:2@1.11.1.chromium.6',
 
+  'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
+  'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
+
   'fast_float_revision': 'cb1d42aaa1e14b09e1452cfdef373d051b8c02a4',
   'fast_float_url': 'https://chromium.googlesource.com/external/github.com/fastfloat/fast_float.git',
 
@@ -123,6 +126,7 @@ deps = {
   'node': Var('node_url') + '@' + Var('node_revision'),
   'third_party/abseil-cpp': Var('abseil_url') + '@' + Var('abseil_revision'),
   'third_party/depot_tools': Var('depot_tools_url') + '@' + Var('depot_tools_revision'),
+  'third_party/dragonbox/src': Var('dragonbox_url') + '@' + Var('dragonbox_revision'),
   'third_party/fast_float/src': Var('fast_float_url') + '@' + Var('fast_float_revision'),
   'third_party/fp16/src': {
     'url': Var('fp16_url') + '@' + Var('fp16_revision'),

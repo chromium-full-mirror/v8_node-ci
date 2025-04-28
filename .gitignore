@@ -4,6 +4,8 @@
 /buildtools/
 /node
 /third_party/*
+!/third_party/dragonbox
+/third_party/dragonbox/src
 !/third_party/fast_float
 /third_party/fast_float/src
 !/third_party/highway
