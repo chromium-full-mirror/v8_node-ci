@@ -89,7 +89,7 @@ vars = {
   'zlib_revision': '5634698162b2182c350e4cb360a0f4dd7706afec',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
-  'simdutf_revision': '40d1fa26cd5ca221605c974e22c001ca2fb12fde',
+  'simdutf_revision': '9d3e4d7c1afb30ed528443d73afab23f22443434',
   'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf.git',
 
   'perfetto_revision': 'aa4d8267bafad6782a1f2c8d979104f2aaa622a0',
