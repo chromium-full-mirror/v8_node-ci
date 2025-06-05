@@ -53,6 +53,9 @@ vars = {
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
   'ninja_version': 'version:2@1.11.1.chromium.6',
 
+  # siso CIPD package version
+  'siso_version': 'git_revision:963177240b1a36697c9762856f51ad36ab545ceb',
+
   'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
   'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
 
@@ -199,6 +202,16 @@ deps = {
     ],
     'dep_type': 'cipd',
   },
+  'third_party/siso': {
+    'packages': [
+      {
+        'package': 'infra/build/siso/${{platform}}',
+        'version': Var('siso_version'),
+      }
+    ],
+    'dep_type': 'cipd',
+    'condition': 'host_cpu != "s390" and host_os != "zos" and host_cpu != "ppc"',
+  },
 }
 
 hooks = [
@@ -288,6 +301,16 @@ hooks = [
                '--rewrapper_cfg_project',
                Var('rewrapper_cfg_project'),
                '--quiet',
+               ],
+  },
+  # Configure Siso for developer builds.
+  {
+    'name': 'configure_siso',
+    'pattern': '.',
+    'action': ['python3',
+               'build/config/siso/configure_siso.py',
+               '--rbe_instance',
+               Var('rbe_instance'),
                ],
   },
 ]
