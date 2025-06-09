@@ -65,7 +65,7 @@ default_args = {
   #########################################################
   # Changeable defaults
   # General build options
-  use_sysroot = false
+  use_sysroot = true
   is_component_build = false
 
   # Node.js defaults.
