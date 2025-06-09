@@ -104,7 +104,7 @@ vars = {
   'jsoncpp_revision': '42e892d96e47b1f6e29844cc705e148ec4856448',
   'jsoncpp_url': 'https://chromium.googlesource.com/external/github.com/open-source-parsers/jsoncpp.git',
 
-  'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',
+  'reclient_version': 're_client_version:0.179.0.28341fc7-gomaip',
 
   # RBE instance to use for running remote builds
   'rbe_instance': Str('projects/rbe-chrome-untrusted/instances/default_instance'),
