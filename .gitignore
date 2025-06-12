@@ -4,6 +4,8 @@
 /buildtools/
 /node
 /third_party/*
+!/third_party/compiler-rt
+/third_party/compiler-rt/src
 !/third_party/dragonbox
 /third_party/dragonbox/src
 !/third_party/fast_float

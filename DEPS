@@ -13,13 +13,13 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '5cc19c9883171bbbdc28a142b1ece17c18bd09bc',
+  'abseil_revision': '2b011cd0e9f1f5c273f29b8fb8656fa97a40cbc8',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
-  'build_revision': 'dc8b2298602e358156f40e1c5531c7c8c3d27c93',
+  'build_revision': '07f164bbe6f261ec907c2ff615f43f6bdd5e1e17',
   'build_url': 'https://chromium.googlesource.com/chromium/src/build.git',
 
-  'buildtools_revision': 'f312f0fbb3030c07a57524691e03aa1cd14f3d02',
+  'buildtools_revision': '1588c6e872876216f7ccf10b61849f44bd0748cb',
   'buildtools_url': 'https://chromium.googlesource.com/chromium/src/buildtools.git',
 
   'buildtools_clang_format_revision': '1549a8dba21b6c022c6f5ccee4edf18e5ceb2109',
@@ -37,7 +37,10 @@ vars = {
   'buildtools_libunwind_revision': '6066b149576465160ac0d935aa644ec6d3bfb2bf',
   'buildtools_libunwind_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libunwind.git',
 
-  'clang_revision': 'f3f536fa16c7c37fb78e3a8744db30b5af32cb59',
+  'compiler_rt_revision': 'd1f4ff49d7d71c2501d32848c9eeb707f857bd4a',
+  'compiler_rt_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/compiler-rt.git',
+
+  'clang_revision': '71e38a389592db1a420dd6176e7448e347efc64c',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
   'depot_tools_revision': '80d1969422e75e8e9eecafa46074074b289e2568',
@@ -47,11 +50,11 @@ vars = {
   'download_remoteexec_cfg': False,
 
   # GN CIPD package version.
-  'gn_version': 'git_revision:e9e83d9095d3234adf68f3e2866f25daf766d5c7',
+  'gn_version': 'git_revision:e5c4d1881b85b82789b7013233a944cf1a46370f',
 
   # ninja CIPD package version.
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
-  'ninja_version': 'version:2@1.11.1.chromium.6',
+  'ninja_version': 'version:3@1.12.1.chromium.4',
 
   # siso CIPD package version
   'siso_version': 'git_revision:963177240b1a36697c9762856f51ad36ab545ceb',
@@ -71,7 +74,7 @@ vars = {
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': 'bbccc2f6efc1b825de5f2c903c48be685cd0cf22',
+  'icu_revision': 'a67fc91f78253e8bc055275d785b634faf27c608',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': '5e1ee241ab04b38889f8d517f2da8b3df7cfbd9a',
@@ -86,7 +89,7 @@ vars = {
   'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '496dda85db1de6bfa7496534dc38d6c38ec478c3',
+  'v8_revision': '9166ee7a00b2498ecdb4d17a1546b7dc2bcf3e06',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
   'zlib_revision': '5634698162b2182c350e4cb360a0f4dd7706afec',
@@ -121,6 +124,7 @@ deps = {
   },
   'build': Var('build_url') + '@' + Var('build_revision'),
   'buildtools': Var('buildtools_url') + '@' + Var('buildtools_revision'),
+  'third_party/compiler-rt/src': Var('compiler_rt_url') + '@' + Var('compiler_rt_revision'),
   'third_party/clang-format/script': Var('buildtools_clang_format_url') + '@' + Var('buildtools_clang_format_revision'),
   'third_party/libc++/src': Var('buildtools_libcxx_url') + '@' + Var('buildtools_libcxx_revision'),
   'third_party/libc++abi/src': Var('buildtools_libcxxabi_url') + '@' + Var('buildtools_libcxxabi_revision'),
