@@ -261,19 +261,22 @@ def recipe(name):
         use_bbagent = True,
     )
 
-def reclient_properties(instance):
+def siso_properties(instance):
     return {
-        "$build/reclient": {
-            "instance": instance,
-            "metrics_project": "chromium-reclient-metrics",
+        "$build/siso": {
+            "project": instance,
+            "configs": ["builder"],
+            "enable_cloud_monitoring": True,
+            "enable_cloud_profiler": True,
+            "enable_cloud_trace": True,
         },
         "$build/v8": {
             "use_remoteexec": True,
         },
     }
 
-RECLIENT_CI = reclient_properties("rbe-chromium-trusted")
-RECLIENT_TRY = reclient_properties("rbe-chromium-untrusted")
+RBE_CI = siso_properties("rbe-chromium-trusted")
+RBE_TRY = siso_properties("rbe-chromium-untrusted")
 
 DEFAULT_ARGS = {
     "executable": recipe("v8/node_integration_ng"),
@@ -306,7 +309,7 @@ def builder_pair(*, ci_name, try_name, os, cq = False, is_debug = False):
     ci_builder(
         name = ci_name,
         os = os,
-        properties = dict(RECLIENT_CI, is_debug = is_debug),
+        properties = dict(RBE_CI, is_debug = is_debug),
         execution_timeout = time.hour,
     )
     luci.console_view_entry(builder = ci_name, console_view = "main")
@@ -314,7 +317,7 @@ def builder_pair(*, ci_name, try_name, os, cq = False, is_debug = False):
     try_builder(
         name = try_name,
         os = os,
-        properties = dict(RECLIENT_TRY, is_debug = is_debug),
+        properties = dict(RBE_TRY, is_debug = is_debug),
         execution_timeout = time.hour,
     )
     luci.list_view_entry(builder = try_name, list_view = "tryserver")
