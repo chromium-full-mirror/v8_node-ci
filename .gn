@@ -105,4 +105,7 @@ default_args = {
   enable_js_protobuf = false
   enable_perfetto_unittests = false
   enable_perfetto_integration_tests = false
+
+  # Use Siso instead of Ninja.
+  use_siso = true
 }
