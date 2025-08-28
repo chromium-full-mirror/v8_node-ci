@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '1e18dc54a045a632de52d420e9636072662841b4',
+  'abseil_revision': '4862f4f12d15d24ace7ab9f1655d91d707c9b51b',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': '1e0c06afa5ad768c5a98f299dab8f4831f8c5acb',
@@ -40,7 +40,7 @@ vars = {
   'compiler_rt_revision': 'd1f4ff49d7d71c2501d32848c9eeb707f857bd4a',
   'compiler_rt_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/compiler-rt.git',
 
-  'clang_revision': '719a5340defded624fbfd83347006ad950ee0b90',
+  'clang_revision': '3b9d8820623d3396d0ba0c32cfadf08a08fd992b',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
   'depot_tools_revision': '80d1969422e75e8e9eecafa46074074b289e2568',
@@ -65,34 +65,34 @@ vars = {
   'fast_float_revision': 'cb1d42aaa1e14b09e1452cfdef373d051b8c02a4',
   'fast_float_url': 'https://chromium.googlesource.com/external/github.com/fastfloat/fast_float.git',
 
-  'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
+  'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': '373af2e3df71599b87a40ce0e37164523849166b',
+  'googletest_revision': '6986c2b575f77135401a4e1c65a7a42f20e18fef',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': '1b2e3e8a421efae36141a7b932b41e315b089af8',
+  'icu_revision': 'd4fa379610d43bcb0fbb149cebbbb3b710909072',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
-  'jinja2_revision': '5e1ee241ab04b38889f8d517f2da8b3df7cfbd9a',
+  'jinja2_revision': 'c3027d884967773057bf74b957e3fea87e5df4d7',
   'jinja2_url': 'https://chromium.googlesource.com/chromium/src/third_party/jinja2.git',
 
-  'markupsafe_revision': '9f8efc8637f847ab1ba984212598e6fb9cf1b3d4',
+  'markupsafe_revision': '4256084ae14175d38a3ff7d739dca83ae49ccec6',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': '8336e5dfb2592a912f91edf904f7f521718fe2d4',
+  'node_revision': '16dcce7d587854a924ad5312d1cdeab10b72cfe7',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
-  'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
+  'trace_common_revision' : 'be7fccb35f6dd0a03ce7bbe7337ac06079466f94',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': 'cb11b8ad256576f69a6ddc646aceae2f01f5c23c',
+  'v8_revision': '58c14ce2d53ad6abe8f29cc3e1a6b89877dd7e02',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '5634698162b2182c350e4cb360a0f4dd7706afec',
+  'zlib_revision': '363a126ed293970f3df97ee5f760cba29a29e193',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'simdutf_revision': '9d3e4d7c1afb30ed528443d73afab23f22443434',
@@ -219,6 +219,17 @@ deps = {
 }
 
 hooks = [
+  {
+    # Ensure that the DEPS'd "depot_tools" has its self-update capability
+    # disabled.
+    'name': 'disable_depot_tools_selfupdate',
+    'pattern': '.',
+    'action': [
+        'python3',
+        'third_party/depot_tools/update_depot_tools_toggle.py',
+        '--disable',
+    ],
+  },
   {
     # This clobbers when necessary (based on get_landmines.py). It must be the
     # first hook so that other things that get/generate into the output
