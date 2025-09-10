@@ -43,7 +43,7 @@ vars = {
   'clang_revision': '3b9d8820623d3396d0ba0c32cfadf08a08fd992b',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '80d1969422e75e8e9eecafa46074074b289e2568',
+  'depot_tools_revision': '958e89cc4131478e1770d4b7f5a1521048fdfd8a',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
