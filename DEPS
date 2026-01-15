@@ -206,7 +206,7 @@ deps = {
     ],
     'dep_type': 'cipd',
   },
-  'third_party/siso': {
+  'third_party/siso/cipd': {
     'packages': [
       {
         'package': 'infra/build/siso/${{platform}}',
