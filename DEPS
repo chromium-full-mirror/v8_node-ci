@@ -13,51 +13,51 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '4862f4f12d15d24ace7ab9f1655d91d707c9b51b',
+  'abseil_revision': '74d426ccd39ca11ed753ec2135a2f33ec6597de8',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
-  'build_revision': '1e0c06afa5ad768c5a98f299dab8f4831f8c5acb',
+  'build_revision': '31ac3ef412f947513c552c7e81f860feb4de2ce0',
   'build_url': 'https://chromium.googlesource.com/chromium/src/build.git',
 
-  'buildtools_revision': '6155afa651b6544404544302dce843c1c7dda72c',
+  'buildtools_revision': '451e71432ac9f6a91d4d5604c29e0a5078e8c2e8',
   'buildtools_url': 'https://chromium.googlesource.com/chromium/src/buildtools.git',
 
-  'buildtools_clang_format_revision': '1549a8dba21b6c022c6f5ccee4edf18e5ceb2109',
+  'buildtools_clang_format_revision': 'c2725e0622e1a86d55f14514f2177a39efea4a0e',
   'buildtools_clang_format_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/clang/tools/clang-format.git',
 
-  'buildtools_libcxx_revision': '9c12a0833f9b62a1aafeb612479653c498845a92',
+  'buildtools_libcxx_revision': '7ab65651aed6802d2599dcb7a73b1f82d5179d05',
   'buildtools_libcxx_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxx.git',
 
-  'buildtools_libcxxabi_revision': '6c4fa00e4becc30085cbc8b44c2764ef307daae2',
+  'buildtools_libcxxabi_revision': '8f11bb1d4438d0239d0dfc1bd9456a9f31629dda',
   'buildtools_libcxxabi_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxxabi.git',
 
-  'buildtools_llvm_libc_revision': 'd8809b0a2e6edd91a9467892ec29315616784973',
+  'buildtools_llvm_libc_revision': '14776ea33c0b64c3cec0ce80ff3eae7ddae9d977',
   'buildtools_llvm_libc_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libc.git',
 
-  'buildtools_libunwind_revision': '6066b149576465160ac0d935aa644ec6d3bfb2bf',
+  'buildtools_libunwind_revision': '17ccf7d110c5526cb77e93cfd8330f491fb2bf18',
   'buildtools_libunwind_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libunwind.git',
 
   'compiler_rt_revision': 'd1f4ff49d7d71c2501d32848c9eeb707f857bd4a',
   'compiler_rt_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/compiler-rt.git',
 
-  'clang_revision': '3b9d8820623d3396d0ba0c32cfadf08a08fd992b',
+  'clang_revision': '1a77bc6053cb587a7e239d5e9e5f1126109d28fb',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '958e89cc4131478e1770d4b7f5a1521048fdfd8a',
+  'depot_tools_revision': '4814cccdb60eb4443f3e31b661eda0ffd8477ab1',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
   'download_remoteexec_cfg': False,
 
   # GN CIPD package version.
-  'gn_version': 'git_revision:e5c4d1881b85b82789b7013233a944cf1a46370f',
+  'gn_version': 'git_revision:2c775ed71ed9c7ceb11823ced47a1a2640883403',
 
   # ninja CIPD package version.
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
   'ninja_version': 'version:3@1.12.1.chromium.4',
 
   # siso CIPD package version
-  'siso_version': 'git_revision:963177240b1a36697c9762856f51ad36ab545ceb',
+  'siso_version': 'git_revision:54be8bcbdd069237406d476362aeb261d6deb8c0',
 
   'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
   'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
@@ -68,13 +68,13 @@ vars = {
   'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': '6986c2b575f77135401a4e1c65a7a42f20e18fef',
+  'googletest_revision': 'e9907112b47255d50b4d343e7e2160bce8dc85d1',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': 'd4fa379610d43bcb0fbb149cebbbb3b710909072',
+  'icu_revision': '11907ffd5acf31245bbd1da316beab86d3f0450c',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': 'c3027d884967773057bf74b957e3fea87e5df4d7',
@@ -83,19 +83,19 @@ vars = {
   'markupsafe_revision': '4256084ae14175d38a3ff7d739dca83ae49ccec6',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'aaa0e6156e321e85042816427403e993cfc745fa',
+  'node_revision': '2b731ac345d4fcf2e1150f560a9614848e26a0e1',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : 'be7fccb35f6dd0a03ce7bbe7337ac06079466f94',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '4e83f47d658b2c950b302a1fc5d48ade36b3d689',
+  'v8_revision': '0aaac5d057aba8983a3d5535199371452f9ce06c',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '363a126ed293970f3df97ee5f760cba29a29e193',
+  'zlib_revision': '7eda07b1e067ef3fd7eea0419c88b5af45c9a776',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
-  'simdutf_revision': '9d3e4d7c1afb30ed528443d73afab23f22443434',
+  'simdutf_revision': 'f7356eed293f8208c40b3c1b344a50bd70971983',
   'simdutf_url': 'https://chromium.googlesource.com/chromium/src/third_party/simdutf.git',
 
   'perfetto_revision': 'aa4d8267bafad6782a1f2c8d979104f2aaa622a0',
@@ -107,7 +107,7 @@ vars = {
   'jsoncpp_revision': '42e892d96e47b1f6e29844cc705e148ec4856448',
   'jsoncpp_url': 'https://chromium.googlesource.com/external/github.com/open-source-parsers/jsoncpp.git',
 
-  'reclient_version': 're_client_version:0.179.0.28341fc7-gomaip',
+  'reclient_version': 're_client_version:0.185.0.db415f21-gomaip',
 
   # RBE instance to use for running remote builds
   'rbe_instance': Str('projects/rbe-chrome-untrusted/instances/default_instance'),
@@ -209,7 +209,7 @@ deps = {
   'third_party/siso/cipd': {
     'packages': [
       {
-        'package': 'infra/build/siso/${{platform}}',
+        'package': 'build/siso/${{platform}}',
         'version': Var('siso_version'),
       }
     ],
