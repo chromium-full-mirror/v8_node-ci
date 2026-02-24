@@ -31,6 +31,7 @@ def print_landmines():  # pylint: disable=invalid-name
   print('Switch to in-tree GN configsXX.')
   print('Build test with build_addons.py.')
   print('New test/testpy/__init__.py.')
+  print('New roll: 2026-02-24')
   build_get_landmines.print_landmines()
   return 0
 
