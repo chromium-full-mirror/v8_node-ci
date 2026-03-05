@@ -87,8 +87,6 @@ default_args = {
   mac_min_system_version="11.0"
 
   # V8 options catering towards Node.js use case.
-  v8_enable_seeded_array_index_hash = true
-  v8_use_default_hasher_secret = false
   v8_expose_symbols = true
   v8_promise_internal_field_count = 1
   v8_use_external_startup_data = false
