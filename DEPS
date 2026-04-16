@@ -13,37 +13,37 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '74d426ccd39ca11ed753ec2135a2f33ec6597de8',
+  'abseil_revision': '677093525ed5a2f357482681a222274866088a2c',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
-  'build_revision': '31ac3ef412f947513c552c7e81f860feb4de2ce0',
+  'build_revision': 'b343247d8a2742e878026a13be01c63141d56b17',
   'build_url': 'https://chromium.googlesource.com/chromium/src/build.git',
 
-  'buildtools_revision': '451e71432ac9f6a91d4d5604c29e0a5078e8c2e8',
+  'buildtools_revision': '7c8d573b2fcd027a044da24af74ee1a2b446b973',
   'buildtools_url': 'https://chromium.googlesource.com/chromium/src/buildtools.git',
 
-  'buildtools_clang_format_revision': 'c2725e0622e1a86d55f14514f2177a39efea4a0e',
+  'buildtools_clang_format_revision': '08cce2b81a4d9801ebeaa8cdb43b241475a4d521',
   'buildtools_clang_format_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/clang/tools/clang-format.git',
 
-  'buildtools_libcxx_revision': '7ab65651aed6802d2599dcb7a73b1f82d5179d05',
+  'buildtools_libcxx_revision': 'cb9c06560a6821f4d8272805df1bb4eb39ba9a2c',
   'buildtools_libcxx_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxx.git',
 
-  'buildtools_libcxxabi_revision': '8f11bb1d4438d0239d0dfc1bd9456a9f31629dda',
+  'buildtools_libcxxabi_revision': '71ea444eeb0ac4ed6698ff585a15158eea30107f',
   'buildtools_libcxxabi_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxxabi.git',
 
-  'buildtools_llvm_libc_revision': '14776ea33c0b64c3cec0ce80ff3eae7ddae9d977',
+  'buildtools_llvm_libc_revision': '11cc56692dd23441516f1182efac2d5665834975',
   'buildtools_llvm_libc_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libc.git',
 
-  'buildtools_libunwind_revision': '17ccf7d110c5526cb77e93cfd8330f491fb2bf18',
+  'buildtools_libunwind_revision': '6ca46ff28e3578c57cbead6f233969eb3dabc176',
   'buildtools_libunwind_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libunwind.git',
 
   'compiler_rt_revision': 'd1f4ff49d7d71c2501d32848c9eeb707f857bd4a',
   'compiler_rt_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/compiler-rt.git',
 
-  'clang_revision': '1a77bc6053cb587a7e239d5e9e5f1126109d28fb',
+  'clang_revision': '904a3c31ed3e60ed769fca5471398d7f5c61cc1f',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '4814cccdb60eb4443f3e31b661eda0ffd8477ab1',
+  'depot_tools_revision': '0ea4801192281fff1675855b6c03fd71811133e2',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -68,13 +68,13 @@ vars = {
   'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'e9907112b47255d50b4d343e7e2160bce8dc85d1',
+  'googletest_revision': 'd72f9c8aea6817cdf1ca0ac10887f328de7f3da2',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': '11907ffd5acf31245bbd1da316beab86d3f0450c',
+  'icu_revision': 'ff7995a708a10ab44db101358083c7f74752da9f',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': 'c3027d884967773057bf74b957e3fea87e5df4d7',
@@ -83,16 +83,16 @@ vars = {
   'markupsafe_revision': '4256084ae14175d38a3ff7d739dca83ae49ccec6',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': '64280ee0af7b25cc86ac9767a853443f6a7e3c69',
+  'node_revision': 'c8111908c47490fdfe04e9cf0d17087d0931a70e',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : 'be7fccb35f6dd0a03ce7bbe7337ac06079466f94',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '0aaac5d057aba8983a3d5535199371452f9ce06c',
+  'v8_revision': 'd9b4e3ed08b966d47173ee3e9ac5a10df9875361',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '7eda07b1e067ef3fd7eea0419c88b5af45c9a776',
+  'zlib_revision': 'b80f1d1e5256ac25f6aea3f31f13d458981cb1f9',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'simdutf_revision': 'f7356eed293f8208c40b3c1b344a50bd70971983',

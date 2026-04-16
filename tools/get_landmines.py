@@ -32,6 +32,7 @@ def print_landmines():  # pylint: disable=invalid-name
   print('Build test with build_addons.py.')
   print('New test/testpy/__init__.py.')
   print('New roll: 2026-02-24')
+  print('2026-04-16: Problems with old gen/node/src/node/inspector/protocol/Target.h')
   build_get_landmines.print_landmines()
   return 0
 
