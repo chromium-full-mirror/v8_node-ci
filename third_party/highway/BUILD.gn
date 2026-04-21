@@ -19,6 +19,10 @@ config("libhwy_external_config") {
     # for absl::uint128 is 16.
     defines += [ "HWY_BROKEN_TARGETS=HWY_ALL_SVE" ]
   }
+  if (target_cpu == "riscv64") {
+    # Runtime dispatch for RVV is broken in highway
+    defines += [ "HWY_BROKEN_TARGETS=HWY_RVV" ]
+  }
 }
 
 source_set("libhwy") {
