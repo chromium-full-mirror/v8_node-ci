@@ -286,6 +286,14 @@ hooks = [
                '--arch=arm64'],
   },
   {
+    'name': 'sysroot_riscv64',
+    'pattern': '.',
+    'condition': '(checkout_linux and checkout_riscv64)',
+    'action': ['python3',
+               'build/linux/sysroot_scripts/install-sysroot.py',
+               '--arch=riscv64'],
+  },
+  {
     'name': 'sysroot_x86',
     'pattern': '.',
     'condition': '(checkout_linux and (checkout_x86 or checkout_x64))',
