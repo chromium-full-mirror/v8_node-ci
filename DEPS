@@ -31,7 +31,7 @@ vars = {
   'buildtools_libcxxabi_revision': '71ea444eeb0ac4ed6698ff585a15158eea30107f',
   'buildtools_libcxxabi_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libcxxabi.git',
 
-  'buildtools_llvm_libc_revision': '57ec00816a5dbbc7792ba179ef2a226799b426be',
+  'buildtools_llvm_libc_revision': '2025a0bcb00b005ec335510bdc9d7a6b4525cb31',
   'buildtools_llvm_libc_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/libc.git',
 
   'buildtools_libunwind_revision': '6ca46ff28e3578c57cbead6f233969eb3dabc176',
