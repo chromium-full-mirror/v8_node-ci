@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '677093525ed5a2f357482681a222274866088a2c',
+  'abseil_revision': 'a09ceefd500400d44708586515203b7804b73760',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': 'b343247d8a2742e878026a13be01c63141d56b17',
@@ -40,10 +40,10 @@ vars = {
   'compiler_rt_revision': 'd1f4ff49d7d71c2501d32848c9eeb707f857bd4a',
   'compiler_rt_url': 'https://chromium.googlesource.com/external/github.com/llvm/llvm-project/compiler-rt.git',
 
-  'clang_revision': '904a3c31ed3e60ed769fca5471398d7f5c61cc1f',
+  'clang_revision': '4cee251627d3ed3357f38f5fc61eab37babff6b9',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '0ea4801192281fff1675855b6c03fd71811133e2',
+  'depot_tools_revision': '10eda50a3fd9c34ad8d31ec74e5f4eb5823d60f6',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -68,13 +68,13 @@ vars = {
   'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'd72f9c8aea6817cdf1ca0ac10887f328de7f3da2',
+  'googletest_revision': '44f22083d7b7e64c061d1cb94c429e3fd17d586d',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': 'ff7995a708a10ab44db101358083c7f74752da9f',
+  'icu_revision': 'd578f2e8b7bd5938e21cfb6bf15c079e0aa5b738',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': 'c3027d884967773057bf74b957e3fea87e5df4d7',
@@ -83,16 +83,16 @@ vars = {
   'markupsafe_revision': '4256084ae14175d38a3ff7d739dca83ae49ccec6',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'd46836457ba6137c7ff86d8e52f317d06720a778',
+  'node_revision': '1d230376c0bd88acd22d8fb3a544414d506fef4d',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : 'be7fccb35f6dd0a03ce7bbe7337ac06079466f94',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '7221f49fdb6c89cce6be08005732ebcab3c45b38',
+  'v8_revision': 'adc7909b2b1279c13f3556f1951ccd39761b5e83',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': 'b80f1d1e5256ac25f6aea3f31f13d458981cb1f9',
+  'zlib_revision': '3246f1b60849cc505e231c5d19d0cbf358093555',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'simdutf_revision': 'f7356eed293f8208c40b3c1b344a50bd70971983',
