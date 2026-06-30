@@ -25,6 +25,10 @@ action("node_headers") {
     "$node_path:generate_config_gypi"
   ]
 
+  inputs = [
+    "$node_path/common.gypi"
+  ]
+
   stamp = "$target_gen_dir/$target_name.stamp"
   outputs = [ stamp ]
 
