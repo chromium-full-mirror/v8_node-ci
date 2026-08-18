@@ -59,6 +59,9 @@ vars = {
   # siso CIPD package version
   'siso_version': 'git_revision:54be8bcbdd069237406d476362aeb261d6deb8c0',
 
+  # CPython 3 CIPD package version for Siso hermetic toolchain.
+  'cpython3_version': 'version:3@3.11.9.chromium.38',
+
   'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
   'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
 
@@ -253,6 +256,26 @@ deps = {
     ],
     'dep_type': 'cipd',
     'condition': 'host_cpu != "s390" and host_os != "zos" and host_cpu != "ppc"',
+  },
+  # Always download Linux x64 package regardless of host OS for RBE workers.
+  'third_party/cpython3/linux-amd64': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/cpython3/linux-amd64',
+        'version': Var('cpython3_version'),
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+  # Host platform package.
+  'third_party/cpython3/host': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/cpython3/${{platform}}',
+        'version': Var('cpython3_version'),
+      }
+    ],
+    'dep_type': 'cipd',
   },
 }
 
