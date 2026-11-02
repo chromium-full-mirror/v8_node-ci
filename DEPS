@@ -65,7 +65,7 @@ vars = {
   'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
   'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
 
-  'fast_float_revision': 'cb1d42aaa1e14b09e1452cfdef373d051b8c02a4',
+  'fast_float_revision': 'dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2',
   'fast_float_url': 'https://chromium.googlesource.com/external/github.com/fastfloat/fast_float.git',
 
   'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
