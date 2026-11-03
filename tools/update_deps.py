@@ -13,6 +13,7 @@ DEPS = {
   'node' : 'origin',
   'third_party/abseil-cpp': 'origin/main',
   'third_party/depot_tools': 'origin/main',
+  'third_party/fast_float/src': 'origin/main',
   'third_party/icu': 'origin/main',
   'third_party/jinja2': 'origin/main',
   'third_party/markupsafe': 'origin/main',
