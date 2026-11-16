@@ -24,6 +24,8 @@ def GenerateBuildFiles(options):
 
   if BuildUpstreamNode():
     gn_args.append('node_v8_path="//node/deps/v8"')
+  else:
+    gn_args.append('node_enable_deprecated_declarations_warnings=true')
 
   if options.asan or options.tsan or options.ubsan or options.ubsan_vptr:
     options.shared = False

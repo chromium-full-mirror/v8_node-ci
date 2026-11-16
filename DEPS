@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': 'a09ceefd500400d44708586515203b7804b73760',
+  'abseil_revision': 'ecb00cc74a6251b273c78789f947d3eb280dd093',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': 'b343247d8a2742e878026a13be01c63141d56b17',
@@ -43,7 +43,7 @@ vars = {
   'clang_revision': '4cee251627d3ed3357f38f5fc61eab37babff6b9',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '10eda50a3fd9c34ad8d31ec74e5f4eb5823d60f6',
+  'depot_tools_revision': '97da8489e4b7e9dc78fa2efb846871a7b423d933',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -65,37 +65,37 @@ vars = {
   'dragonbox_revision': '6c7c925b571d54486b9ffae8d9d18a822801cbda',
   'dragonbox_url': 'https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git',
 
-  'fast_float_revision': 'dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2',
+  'fast_float_revision': '8ec59686a1430867ba609c2777ca15143dd81003',
   'fast_float_url': 'https://chromium.googlesource.com/external/github.com/fastfloat/fast_float.git',
 
-  'fp16_revision': '3d2de1816307bac63c16a297e8c4dc501b4076df',
+  'fp16_revision': '782eea126dc5c755827be751a099eb01826175cf',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': '44f22083d7b7e64c061d1cb94c429e3fd17d586d',
+  'googletest_revision': '845e54d32d86ee1bb872ebb5b1c755e6e3a94c34',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
   'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
-  'icu_revision': 'd578f2e8b7bd5938e21cfb6bf15c079e0aa5b738',
+  'icu_revision': 'd3c612f4414600bd06a68db89944df130b5bc248',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
-  'jinja2_revision': 'c3027d884967773057bf74b957e3fea87e5df4d7',
+  'jinja2_revision': 'fde3c16799bd5937e4f15aedc9037c89f96236b9',
   'jinja2_url': 'https://chromium.googlesource.com/chromium/src/third_party/jinja2.git',
 
   'markupsafe_revision': '4256084ae14175d38a3ff7d739dca83ae49ccec6',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'f4878ebb9489f4fb624463ed1b4f40c51ad3aae2',
+  'node_revision': 'e7469284ef7b0bdd57d1d1ef8ef074568be4a5ca',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
-  'trace_common_revision' : 'be7fccb35f6dd0a03ce7bbe7337ac06079466f94',
+  'trace_common_revision' : '0767e40b45579fdc006d0f6dacc6e3c1e6451987',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '3a8c5b997470fde25a5e4ad381c02c645b58e1bc',
+  'v8_revision': 'a27b2be6b49ba1ec4a1670e71f821f18562e9f35',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '3246f1b60849cc505e231c5d19d0cbf358093555',
+  'zlib_revision': 'ec453dc9abac1ddf39ced752e72a7a80dcda1d91',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'simdutf_revision': 'f7356eed293f8208c40b3c1b344a50bd70971983',
