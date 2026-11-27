@@ -74,7 +74,7 @@ vars = {
   'googletest_revision': 'a46a6012a133c7c0929fdae55b321c2fe65f3c5f',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
-  'highway_revision': '00fe003dac355b979f36157f9407c7c46448958e',
+  'highway_revision': '2607d3b5b0113992fe84d3848859eae13b3b52c1',
   'highway_url': 'https://chromium.googlesource.com/external/github.com/google/highway.git',
 
   'icu_revision': '34e7528a4972e78a1b7404708ef613b8040d8091',
